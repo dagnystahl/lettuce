@@ -1,7 +1,6 @@
 // content.js
-alert("Being vegan is good for you. Make sure to recharge your crystals under the light of a full moon!")
 
-const meat_words = [
+const meatWords = [
     "bacon",
     "beef",
     "bologna",
@@ -51,7 +50,7 @@ const meat_words = [
     "zungenwurst"
 ];
 
-const vegetable_words = [
+const vegetableWords = [
     "alfalfa sprouts",
     "apple",
     "apricot",
@@ -186,3 +185,24 @@ const vegetable_words = [
     "yuca",
     "zucchini squash",
 ]
+
+// String alternation of all meat words.
+var meatWordString = "";
+
+meatWords.forEach(element => {
+    meatWordString += element +'|';
+});
+meatWordString = meatWordString.slice(0, -1);
+
+alert(getRandVegWord());
+
+/**
+ * Get a random vegetable word.
+ */
+function getRandVegWord() {
+    return vegetableWords[Math.floor(Math.random() * vegetableWords.length)];
+}
+
+var meatRegex = new RegExp(`${meatWordString}`, "gi");
+
+document.body.innerHTML = document.body.innerHTML.replace(meatRegex, getRandVegWord());
