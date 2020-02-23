@@ -1,10 +1,14 @@
 {
-	"name": "Everything lettuce",
+	"name": "ShuckShuckGo",
 	"version": "1.0",
 	"manifest_version": 2,
 	"browser_action": {
-		"default_icon": "tomato.png"
+		"default_icon": "corn32.png"
 	},
+	"description": "Converts all scary meat references to friendly happy vegetables.",
+    "icons": { "16": "corn16.png",
+               "32": "corn32.png",
+              "128": "corn128.png" },
 	"content_scripts": [
 		{
 			"matches": [
