@@ -364,8 +364,11 @@ meatWords.forEach(element => {
 meatWordString = meatWordString.slice(0, -1);
 
 var domImgs = document.querySelectorAll('img');
-for (var i = 0; i < domImgs.length; i++) {
-    chrome.runtime.sendMessage({"image": domImgs[i].src, "imageNodeIndex": i});
+var imageIndex = 0;
+for (var img of domImgs) {
+    img.id = `vegwillreplaceyou${imageIndex}`;
+    chrome.runtime.sendMessage({"image": img.src, "imageNodeIndex": imageIndex});
+    imageIndex++;
 }
 
 chrome.runtime.onMessage.addListener(function(msg) {
@@ -378,7 +381,7 @@ chrome.runtime.onMessage.addListener(function(msg) {
 
 function replaceIfMeat(classStr, imgIndex) {
     if (classStr.match(meatWordString)) {
-        domImgs[imgIndex].src =  veggiepics[Math.floor(Math.random()* veggiepics.length)];
+        document.getElementById(`vegwillreplaceyou${imgIndex}`).src =  veggiepics[Math.floor(Math.random()* veggiepics.length)];
     }
 }
 

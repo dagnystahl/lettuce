@@ -15,7 +15,7 @@ chrome.runtime.onMessage.addListener(function(imgs) {
                 var obj = JSON.parse(result1);
                 
                 chrome.tabs.query({active: true}, function(tabs) {
-                    chrome.tabs.sendMessage(tabs[0].id, {"imageTags": obj, "imageNodeIndex": imgs.imageNodeIndex, "tab": tabs});
+                    chrome.tabs.sendMessage(tabs[0].id, {"imageTags": obj, "imageNodeIndex": imgs.imageNodeIndex});
                 });
             }
         }
