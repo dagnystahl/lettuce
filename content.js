@@ -344,8 +344,9 @@ const veggiepics = [
     "https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fs3-ap-northeast-1.amazonaws.com%2Fpsh-ex-ftnikkei-3937bb4%2Fimages%2F5%2F9%2F1%2F2%2F3152195-1-eng-GB%2F20161107_solar_panel_waste.jpg?source=nar-cms",
     "https://images.unsplash.com/photo-1515344905723-babc01aac23d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80",
     "https://i2.wp.com/www.8shit.net/assets/2018/03/brocoli.jpg?resize=600%2C357&ssl=1",
-    "https://s3.amazonaws.com/cdn.gurneys.com/images/800/67872.jpg"
-       
+    "https://s3.amazonaws.com/cdn.gurneys.com/images/800/67872.jpg",
+    "https://www.interviewmagazine.com/wp-content/uploads/2019/04/garfield_fendi.jpg",
+    "https://coubsecure-s.akamaihd.net/get/b190/p/coub/simple/cw_timeline_pic/aaf4538c95b/81e2a560e6e906487912d/med_1499695425_image.jpg"
 ]
 
 var replacementMap = {}
