@@ -104,8 +104,7 @@ const meatWords = [
     "corn dog",
     "corndog",
     "cottage cheese",
-    "T bone"
-
+    "t-bone"
 ];
 
 const vegetableWords = [
@@ -267,8 +266,7 @@ const vegetableWords = [
     "pinecone",
     "kush",
     "shrub",
-
-]
+];
 
 const veggiepics = [
     "https://cdn.britannica.com/s:800x450,c:crop/63/186963-138-AEE87658/vegetables.jpg",
@@ -327,16 +325,7 @@ const veggiepics = [
     "https://www.justataste.com/wp-content/uploads/2018/02/best-fruit-salad-honey-lime-dressing.jpg",
     "https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/325/325550/all-fruit-contains-sugar-but-generally-less-that-sweetened-food.jpg?w=1155&h=1541",
     "https://blueprint-api-production.s3.amazonaws.com/uploads/story/thumbnail/75162/bc19f795-93ff-4e94-bfc8-71363e677d35.jpg"
-    
-]
-
-var replacementMap = {}
-var counter = 0;
-
-meatWords.forEach(element =>{
-    replacementMap[element] = vegetableWords[counter];
-    counter++;
-});
+];
 
 // String alternation of all meat words.
 var meatWordString = "";
@@ -345,6 +334,33 @@ meatWords.forEach(element => {
     meatWordString += element +'|';
 });
 meatWordString = meatWordString.slice(0, -1);
+
+var domImgs = document.querySelectorAll('img');
+for (var i = 0; i < domImgs.length; i++) {
+    chrome.runtime.sendMessage({"image": domImgs[i].src, "imageNodeIndex": i});
+}
+
+chrome.runtime.onMessage.addListener(function(msg) {
+    var classString = "";
+    for(const classStr in msg.imageTags.images[0].classifiers[0].classes) {
+        classString +=  msg.imageTags.images[0].classifiers[0].classes[classStr].class;
+    }
+    replaceIfMeat(classString, msg.imageNodeIndex);
+});
+
+function replaceIfMeat(classStr, imgIndex) {
+    if (classStr.match(meatWordString)) {
+        domImgs[imgIndex].src =  veggiepics[Math.floor(Math.random()* veggiepics.length)];
+    }
+}
+
+var replacementMap = {}
+var counter = 0;
+
+meatWords.forEach(element =>{
+    replacementMap[element] = vegetableWords[counter];
+    counter++;
+});
 
 /**
  * Get a random vegetable word.
