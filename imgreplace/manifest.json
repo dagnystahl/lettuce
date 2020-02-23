@@ -1,10 +1,26 @@
-{"name": "Everything lettuce",
-"version": "1.0",
-"manifest_version": 2,
-"browser_action": {"default_icon":"tomato.png"}
-, "content_scripts": [
-	{"matches":["<all_urls>"], "js": ["content.js"]}
-],
-"background": {"scripts": ["background.js"]}
-
+{
+	"name": "Everything lettuce",
+	"version": "1.0",
+	"manifest_version": 2,
+	"browser_action": {
+		"default_icon": "tomato.png"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"<all_urls>"
+			],
+			"js": [
+				"content.js"
+			]
+		}
+	],
+	"background": {
+		"scripts": [
+			"background.js"
+		]
+	}
+	,"permissions": [
+		"http://*/"
+	]
 }
