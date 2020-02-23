@@ -1,22 +1,27 @@
 // content.js
 
 const meatWords = [
+    "animal",
+    "steak",
     "bacon",
     "beef",
+    "fish",
+    "pork",
+    "ham",
+    "chicken",
     "bologna",
+    "flesh",
     "bratwurst",
     "bresaola",
     "butifarra negra",
     "capocollo",
     "caviar",
     "cervelat",
-    "chicken",
     "chorizo",
     "coppa",
     "culatello",
     "finocchiona",
     "guanciale",
-    "ham",
     "hamburger",
     "hot dog",
     "jamon iberico",
@@ -34,7 +39,6 @@ const meatWords = [
     "pancetta",
     "pastrami",
     "pepperoni",
-    "pork",
     "poultry",
     "prosciutto",
     "ribs",
@@ -44,19 +48,32 @@ const meatWords = [
     "saucisson d'arles",
     "soppressata",
     "soujouk",
-    "steak",
     "veal",
     "venison",
-    "zungenwurst"
+    "zungenwurst",
+    "lamb",
+    "mutton",
+    "ribeye",
+    "filet",
+    "filet mignon",
+    "foie gra",
+    "barbacoa",
+    "carne",
+    "brisket"
 ];
 
 const vegetableWords = [
+    "plant",
+    "asian pear",
+    "broccoli",
+    "asparagus",
     "alfalfa sprout",
+    "kumquat",
+    "cantaloupe",
+    "garlic",
     "apple",
     "apricot",
     "artichoke",
-    "asian pear",
-    "asparagus",
     "atemoya",
     "avocado",
     "bamboo shoot",
@@ -73,11 +90,9 @@ const vegetableWords = [
     "boniato",
     "boysenberry",
     "broccoflower",
-    "broccoli",
     "brussels sprout",
     "cabbage",
     "cactus pear",
-    "cantaloupe",
     "carambola",
     "carrot",
     "casaba melon",
@@ -98,7 +113,6 @@ const vegetableWords = [
     "feijoa",
     "fennel",
     "fig",
-    "garlic",
     "gooseberry",
     "grapefruit",
     "grape",
@@ -114,7 +128,6 @@ const vegetableWords = [
     "kale",
     "kiwifruit",
     "kohlrabi",
-    "kumquat",
     "leeks",
     "lemon",
     "lettuce",
@@ -181,8 +194,16 @@ const vegetableWords = [
     "yams",
     "yellow squash",
     "yuca",
-    "zucchini squash",
+    "zucchini squash"
 ]
+
+var replacementMap = {}
+var counter = 0;
+
+meatWords.forEach(element =>{
+    replacementMap[element] = vegetableWords[counter];
+    counter++;
+});
 
 // String alternation of all meat words.
 var meatWordString = "";
@@ -199,7 +220,11 @@ function getRandVegWord() {
     return vegetableWords[Math.floor(Math.random() * vegetableWords.length)];
 }
 
-var meatRegex = new RegExp(meatWordString, "gi");
+function getReplacementString(input) {
+    return replacementMap[input.toLowerCase()];
+}
+
+var meatRegex = new RegExp(Object.keys(replacementMap).join('|'), 'igs');
 
 var elementsInBody = [...document.body.getElementsByTagName('*')];
 
@@ -210,7 +235,7 @@ function findAndReplaceMeatWords(){
     elementsInBody.forEach(element =>{
         element.childNodes.forEach(child =>{
             if(child.nodeType === 3){
-                child.nodeValue = child.nodeValue.replace(meatRegex, getRandVegWord());
+                child.nodeValue = child.nodeValue.replace(meatRegex, getReplacementString);
             }
         });
     });
