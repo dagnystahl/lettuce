@@ -327,7 +327,25 @@ const veggiepics = [
     "https://www.justataste.com/wp-content/uploads/2018/02/best-fruit-salad-honey-lime-dressing.jpg",
     "https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/325/325550/all-fruit-contains-sugar-but-generally-less-that-sweetened-food.jpg?w=1155&h=1541",
     "https://blueprint-api-production.s3.amazonaws.com/uploads/story/thumbnail/75162/bc19f795-93ff-4e94-bfc8-71363e677d35.jpg"
-    
+    ,"https://cdn.mos.cms.futurecdn.net/r8NK24bmcMgSib5zWKKQkW-320-80.jpg",
+    "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-steamed-broccoli-horizontal-1537557588.jpg?resize=480:*",
+    "https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/322/322757/pregnant-woman-holding-fruit-including-apples-and-oranges-by-tummy-bump.jpg?w=1155&h=1541",
+    "https://scstylecaster.files.wordpress.com/2016/05/chakras-guide-01-1.jpg?w=712&h=712",
+    "https://upload.wikimedia.org/wikipedia/commons/e/e2/Pond_in_Florida.jpg",
+    "https://res.cloudinary.com/sagacity/image/upload/c_crop,h_667,w_1000,x_0,y_0/c_limit,f_auto,fl_lossy,q_80,w_1080/shutterstock_442647010_brbfkm.jpg",
+    "https://animalogic.ca/wp-content/uploads/2016/06/animalogic-possum.jpg",
+    "https://lh3.googleusercontent.com/proxy/PZmIhs3wt-gnDFWQB8INZf8haN1q52fpwJ7M0uDzkOZmyH9uLzFArJUJJ2OFpBVEN2lvwB9Gu_ooy9QiowjBlUAVbY43mTcsBppi1SiaIxQfnDJhcKMbUsLzrZtmUMLS3fuc5U0A8H6u",
+    "https://pbs.twimg.com/media/DtmjZgPWoAIf05P.jpg",
+    "https://images2.minutemediacdn.com/image/upload/c_crop,h_1778,w_3155,x_0,y_843/v1554928552/shape/mentalfloss/540093-istock-514343279.jpg?itok=5A2abidY",
+    "https://cdn.shopify.com/s/files/1/1780/2563/products/DolphinSunset_sf_2048x.jpg?v=1486970928",
+    "https://dam.farmjournal.com/m/370ecb0afff17407/webimage-1849813C-B58C-4941-9606B9836D635317.jpg",
+    "https://foodtank.com/wp-content/uploads/2019/02/FTLusherShute-1.jpg",
+    "https://theforkedspoon.com/wp-content/uploads/2017/04/How-to-Cook-Beets-2.jpg",
+    "https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fs3-ap-northeast-1.amazonaws.com%2Fpsh-ex-ftnikkei-3937bb4%2Fimages%2F5%2F9%2F1%2F2%2F3152195-1-eng-GB%2F20161107_solar_panel_waste.jpg?source=nar-cms",
+    "https://images.unsplash.com/photo-1515344905723-babc01aac23d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80",
+    "https://i2.wp.com/www.8shit.net/assets/2018/03/brocoli.jpg?resize=600%2C357&ssl=1",
+    "https://s3.amazonaws.com/cdn.gurneys.com/images/800/67872.jpg"
+       
 ]
 
 var replacementMap = {}
