@@ -1,6 +1,10 @@
 // content.js
 
 const meatWords = [
+    "butcher",
+    "milk",
+    "aquarium",
+    "firearm",
     "rifle",
     "gun",
     "shoot",
@@ -104,10 +108,21 @@ const meatWords = [
     "corn dog",
     "corndog",
     "cottage cheese",
-    "t-bone"
+    "t-bone",
+    "charcuterie",
+    "wagyu",
+    "anchovy",
+    "bone",
+    "spam",
+    "sashimi"
+
 ];
 
 const vegetableWords = [
+    "farmer",
+    "juice",
+    "water prison",
+    "shovel",
     "boom stick",
     "bubble gun",
     "hug",
@@ -267,7 +282,6 @@ const vegetableWords = [
     "kush",
     "shrub",
 ];
-
 const veggiepics = [
     "https://cdn.britannica.com/s:800x450,c:crop/63/186963-138-AEE87658/vegetables.jpg",
     "https://images.ctfassets.net/wy4h2xf1swlt/asset_23248/0567bc627554de56cd6f8f555f7fc18f/Fruits-and-vegetables-for-mental-health-1.jpg",
@@ -325,26 +339,21 @@ const veggiepics = [
     "https://www.justataste.com/wp-content/uploads/2018/02/best-fruit-salad-honey-lime-dressing.jpg",
     "https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/325/325550/all-fruit-contains-sugar-but-generally-less-that-sweetened-food.jpg?w=1155&h=1541",
     "https://blueprint-api-production.s3.amazonaws.com/uploads/story/thumbnail/75162/bc19f795-93ff-4e94-bfc8-71363e677d35.jpg",
-    "https://cdn.mos.cms.futurecdn.net/r8NK24bmcMgSib5zWKKQkW-320-80.jpg",
-    "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-steamed-broccoli-horizontal-1537557588.jpg?resize=480:*",
-    "https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/322/322757/pregnant-woman-holding-fruit-including-apples-and-oranges-by-tummy-bump.jpg?w=1155&h=1541",
-    "https://scstylecaster.files.wordpress.com/2016/05/chakras-guide-01-1.jpg?w=712&h=712",
-    "https://upload.wikimedia.org/wikipedia/commons/e/e2/Pond_in_Florida.jpg",
-    "https://res.cloudinary.com/sagacity/image/upload/c_crop,h_667,w_1000,x_0,y_0/c_limit,f_auto,fl_lossy,q_80,w_1080/shutterstock_442647010_brbfkm.jpg",
-    "https://animalogic.ca/wp-content/uploads/2016/06/animalogic-possum.jpg",
-    "https://lh3.googleusercontent.com/proxy/PZmIhs3wt-gnDFWQB8INZf8haN1q52fpwJ7M0uDzkOZmyH9uLzFArJUJJ2OFpBVEN2lvwB9Gu_ooy9QiowjBlUAVbY43mTcsBppi1SiaIxQfnDJhcKMbUsLzrZtmUMLS3fuc5U0A8H6u",
-    "https://pbs.twimg.com/media/DtmjZgPWoAIf05P.jpg",
-    "https://images2.minutemediacdn.com/image/upload/c_crop,h_1778,w_3155,x_0,y_843/v1554928552/shape/mentalfloss/540093-istock-514343279.jpg?itok=5A2abidY",
-    "https://cdn.shopify.com/s/files/1/1780/2563/products/DolphinSunset_sf_2048x.jpg?v=1486970928",
-    "https://dam.farmjournal.com/m/370ecb0afff17407/webimage-1849813C-B58C-4941-9606B9836D635317.jpg",
-    "https://foodtank.com/wp-content/uploads/2019/02/FTLusherShute-1.jpg",
-    "https://theforkedspoon.com/wp-content/uploads/2017/04/How-to-Cook-Beets-2.jpg",
-    "https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fs3-ap-northeast-1.amazonaws.com%2Fpsh-ex-ftnikkei-3937bb4%2Fimages%2F5%2F9%2F1%2F2%2F3152195-1-eng-GB%2F20161107_solar_panel_waste.jpg?source=nar-cms",
-    "https://images.unsplash.com/photo-1515344905723-babc01aac23d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80",
-    "https://i2.wp.com/www.8shit.net/assets/2018/03/brocoli.jpg?resize=600%2C357&ssl=1",
-    "https://s3.amazonaws.com/cdn.gurneys.com/images/800/67872.jpg",
-    "https://www.interviewmagazine.com/wp-content/uploads/2019/04/garfield_fendi.jpg",
-    "https://coubsecure-s.akamaihd.net/get/b190/p/coub/simple/cw_timeline_pic/aaf4538c95b/81e2a560e6e906487912d/med_1499695425_image.jpg"
+    "https://www.gannett-cdn.com/presto/2020/01/23/USAT/ff2e3445-a247-456a-a551-c54fa577b522-AP_California_Monarch_Butterflies.JPG",
+    "https://natgeo.imgix.net/subject-monarchbutterfly.jpg?auto=compress,format&w=1920&h=960&fit=crop",
+    "https://www.rei.com/media/product/139714",
+    "https://1mple1hxjby2dz9z41kz5j71-wpengine.netdna-ssl.com/wp-content/uploads/2019/01/Non-Dairy-Milk-S.Ferreira-2-1030x773.jpg",
+    "https://grist.files.wordpress.com/2017/01/plant-milks-shutterstock-c.jpg?w=1024&h=576&crop=1",
+    "https://images.agoramedia.com/everydayhealth/gcms/All-About-Bananas-Nutrition-Facts-Health-Benefits-Recipes-and-More-RM-722x406.jpg",
+    "https://earthporm.com/wp-content/uploads/2014/02/Happy-Pigs-Swimming-Are-Already-Bizarre-But-When-You-Hear-How-They-Got-There...-WOW1.jpg",
+    "https://www.irelandbeforeyoudie.com/wp-content/uploads/2015/03/happy-pigs.jpg",
+    "https://lh3.googleusercontent.com/proxy/ZZI_W9Hair6amGI4bIMRJn_HfJcdyeTQLFjSaCczHXeKnCdIT4YilxfFnNm4BYmyr9qLbhJju9i5ecDhNt4aTbcV47rWGp4kv5qcx9l20nqUsA",
+    "https://cdn.shoplightspeed.com/shops/612892/files/12565379/800x1024x1/incense-holder-shapes.jpg",
+    "https://cdn.mindful.org/Meditation_Goleman.jpg?q=80&fm=jpg&fit=crop&w=1400&h=875",
+    "https://tg-cdn.azureedge.net/sites/default/files/2019-10/meadow-3375052_1920-%281%29.jpg",
+    "https://www.snowsfarm.com/wp-content/uploads/2018/02/hay-mulch-hay-bales.jpg",
+    "https://pics.me.me/beep-beep-lettuce-58531716.png",
+    "https://i.pinimg.com/originals/0b/d0/93/0bd093d9bbd96cfe0ce13b61985af35a.jpg"
 ]
 
 var replacementMap = {}
