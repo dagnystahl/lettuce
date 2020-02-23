@@ -1,5 +1,9 @@
 chrome.runtime.onMessage.addListener(gotMessage);
 const meatWords = [
+    "butcher",
+    "milk",
+    "aquarium",
+    "firearm",
     "rifle",
     "gun",
     "shoot",
@@ -103,10 +107,21 @@ const meatWords = [
     "corn dog",
     "corndog",
     "cottage cheese",
-    "t-bone"
+    "t-bone",
+    "charcuterie",
+    "wagyu",
+    "anchovy",
+    "bone",
+    "spam",
+    "sashimi"
+
 ];
 
 const vegetableWords = [
+    "farmer",
+    "juice",
+    "water prison",
+    "shovel",
     "boom stick",
     "bubble gun",
     "hug",
@@ -322,7 +337,23 @@ const veggiepics = [
     "https://storage.ning.com/topology/rest/1.0/file/get/2955675254?profile=original",
     "https://www.justataste.com/wp-content/uploads/2018/02/best-fruit-salad-honey-lime-dressing.jpg",
     "https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/325/325550/all-fruit-contains-sugar-but-generally-less-that-sweetened-food.jpg?w=1155&h=1541",
-    "https://blueprint-api-production.s3.amazonaws.com/uploads/story/thumbnail/75162/bc19f795-93ff-4e94-bfc8-71363e677d35.jpg"
+    "https://blueprint-api-production.s3.amazonaws.com/uploads/story/thumbnail/75162/bc19f795-93ff-4e94-bfc8-71363e677d35.jpg",
+    "https://www.gannett-cdn.com/presto/2020/01/23/USAT/ff2e3445-a247-456a-a551-c54fa577b522-AP_California_Monarch_Butterflies.JPG",
+    "https://natgeo.imgix.net/subject-monarchbutterfly.jpg?auto=compress,format&w=1920&h=960&fit=crop",
+    "https://www.rei.com/media/product/139714",
+    "https://1mple1hxjby2dz9z41kz5j71-wpengine.netdna-ssl.com/wp-content/uploads/2019/01/Non-Dairy-Milk-S.Ferreira-2-1030x773.jpg",
+    "https://grist.files.wordpress.com/2017/01/plant-milks-shutterstock-c.jpg?w=1024&h=576&crop=1",
+    "https://images.agoramedia.com/everydayhealth/gcms/All-About-Bananas-Nutrition-Facts-Health-Benefits-Recipes-and-More-RM-722x406.jpg",
+    "https://earthporm.com/wp-content/uploads/2014/02/Happy-Pigs-Swimming-Are-Already-Bizarre-But-When-You-Hear-How-They-Got-There...-WOW1.jpg",
+    "https://www.irelandbeforeyoudie.com/wp-content/uploads/2015/03/happy-pigs.jpg",
+    "https://lh3.googleusercontent.com/proxy/ZZI_W9Hair6amGI4bIMRJn_HfJcdyeTQLFjSaCczHXeKnCdIT4YilxfFnNm4BYmyr9qLbhJju9i5ecDhNt4aTbcV47rWGp4kv5qcx9l20nqUsA",
+    "https://cdn.shoplightspeed.com/shops/612892/files/12565379/800x1024x1/incense-holder-shapes.jpg",
+    "https://cdn.mindful.org/Meditation_Goleman.jpg?q=80&fm=jpg&fit=crop&w=1400&h=875",
+    "https://tg-cdn.azureedge.net/sites/default/files/2019-10/meadow-3375052_1920-%281%29.jpg",
+    "https://www.snowsfarm.com/wp-content/uploads/2018/02/hay-mulch-hay-bales.jpg",
+    "https://pics.me.me/beep-beep-lettuce-58531716.png",
+    "https://i.pinimg.com/originals/0b/d0/93/0bd093d9bbd96cfe0ce13b61985af35a.jpg"
+    
     
 ]
 

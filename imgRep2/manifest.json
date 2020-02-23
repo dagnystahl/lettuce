@@ -1,14 +1,14 @@
 {
-	"name": "ShuckShuckGo",
+	"name": "GreenScreen", 
 	"version": "1.0",
 	"manifest_version": 2,
 	"browser_action": {
-		"default_icon": "corn32.png"
+		"default_icon": "lettuce32.png"
 	},
 	"description": "Converts all scary meat references to friendly happy vegetables.",
-    "icons": { "16": "corn16.png",
-               "32": "corn32.png",
-              "128": "corn128.png" },
+    "icons": { "16": "lettuce16.png",
+               "32": "lettuce32.png",
+              "128": "lettuce128.png" },
 	"content_scripts": [
 		{
 			"matches": [
