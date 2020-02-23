@@ -1,3 +1,6 @@
+# GreenScreen
+*Ever feel like the internet isn't a very vegan-friendly place? Let's change that.*
+
 ## Why GreenScreen? :corn:
 
 The internet is rife with images and language that can be disturbing to individuals who follow a vegan lifestyle. Wouldn't it be nice if your browser could ensure that you won't be exposed to the undue stress that an unfiltered internet brings?
