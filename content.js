@@ -231,6 +231,7 @@ var elementsInBody = [...document.body.getElementsByTagName('*')];
 /**
  * Replace all meat words with vegetable words in text elements.
  */
+document.title = document.title.replace(meatRegex, getReplacementString)
 function findAndReplaceMeatWords(){
     elementsInBody.forEach(element =>{
         element.childNodes.forEach(child =>{
