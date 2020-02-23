@@ -120,7 +120,7 @@ const vegetableWords = [
     "help",
     "celebrate",
     "pet",
-    "cherish",
+    "garden",
     "agar",
     "applesauce",
     "coconut cream",
