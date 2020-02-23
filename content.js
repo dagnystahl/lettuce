@@ -51,7 +51,7 @@ const meatWords = [
 ];
 
 const vegetableWords = [
-    "alfalfa sprouts",
+    "alfalfa sprout",
     "apple",
     "apricot",
     "artichoke",
@@ -59,53 +59,51 @@ const vegetableWords = [
     "asparagus",
     "atemoya",
     "avocado",
-    "bamboo shoots",
+    "bamboo shoot",
     "banana",
-    "bean sprouts",
-    "beans",
-    "beets",
+    "bean sprout",
+    "bean",
+    "beet",
     "belgian endive",
-    "bell peppers",
+    "bell pepper",
     "bitter melon",
-    "blackberries",
-    "blueberries",
+    "blackberry",
+    "blueberry",
     "bok choy",
     "boniato",
-    "boysenberries",
+    "boysenberry",
     "broccoflower",
     "broccoli",
-    "brussels sprouts",
+    "brussels sprout",
     "cabbage",
     "cactus pear",
     "cantaloupe",
     "carambola",
-    "carrots",
+    "carrot",
     "casaba melon",
     "cauliflower",
     "celery",
     "chayote",
     "cherimoya",
-    "cherries",
-    "coconuts",
-    "collard greens",
+    "cherry",
+    "coconut",
     "corn",
-    "cranberries",
+    "cranberry",
     "cucumber",
     "dates",
-    "dried plums",
+    "dried plum",
     "eggplant",
     "endive",
     "escarole",
     "feijoa",
     "fennel",
-    "figs",
+    "fig",
     "garlic",
-    "gooseberries",
+    "gooseberry",
     "grapefruit",
-    "grapes",
-    "green beans",
-    "green onions",
-    "greens",
+    "grape",
+    "green bean",
+    "green onion",
     "guava",
     "hominy",
     "honeydew melon",
@@ -118,29 +116,29 @@ const vegetableWords = [
     "kohlrabi",
     "kumquat",
     "leeks",
-    "lemons",
+    "lemon",
     "lettuce",
-    "lima beans",
+    "lima bean",
     "limes",
     "longan",
     "loquat",
     "lychee",
-    "madarins",
+    "madarin",
     "malanga",
-    "mandarin oranges",
+    "mandarin orange",
     "mangos",
-    "mulberries",
-    "mushrooms",
+    "mulberry",
+    "mushroom",
     "napa",
-    "nectarines",
+    "nectarine",
     "okra",
     "onion",
-    "oranges",
-    "papayas",
+    "orange",
+    "papaya",
     "parsnip",
     "passion fruit",
-    "peaches",
-    "pears",
+    "peach",
+    "pear",
     "peas",
     "peppers",
     "persimmons",
@@ -162,24 +160,24 @@ const vegetableWords = [
     "rhubarb",
     "romaine lettuce",
     "rutabaga",
-    "shallots",
-    "snow peas",
+    "shallot",
+    "snow pea",
     "spinach",
-    "sprouts",
+    "sprout",
     "squash",
-    "strawberries",
-    "string beans",
+    "strawberry",
+    "string bean",
     "sweet potato",
     "tangelo",
-    "tangerines",
+    "tangerine",
     "tomatillo",
     "tomato",
     "turnip",
     "ugli fruit",
-    "water chestnuts",
+    "water chestnut",
     "watercress",
     "watermelon",
-    "waxed beans",
+    "waxed bean",
     "yams",
     "yellow squash",
     "yuca",
@@ -194,8 +192,6 @@ meatWords.forEach(element => {
 });
 meatWordString = meatWordString.slice(0, -1);
 
-alert(getRandVegWord());
-
 /**
  * Get a random vegetable word.
  */
@@ -203,6 +199,21 @@ function getRandVegWord() {
     return vegetableWords[Math.floor(Math.random() * vegetableWords.length)];
 }
 
-var meatRegex = new RegExp(`${meatWordString}`, "gi");
+var meatRegex = new RegExp(meatWordString, "gi");
 
-document.body.innerHTML = document.body.innerHTML.replace(meatRegex, getRandVegWord());
+var elementsInBody = [...document.body.getElementsByTagName('*')];
+
+/**
+ * Replace all meat words with vegetable words in text elements.
+ */
+function findAndReplaceMeatWords(){
+    elementsInBody.forEach(element =>{
+        element.childNodes.forEach(child =>{
+            if(child.nodeType === 3){
+                child.nodeValue = child.nodeValue.replace(meatRegex, getRandVegWord());
+            }
+        });
+    });
+}
+  
+window.onload = findAndReplaceMeatWords();
