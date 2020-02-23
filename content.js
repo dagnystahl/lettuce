@@ -1,6 +1,7 @@
 // content.js
 
 const meatWords = [
+    "raw",
     "butcher",
     "milk",
     "aquarium",
@@ -119,6 +120,7 @@ const meatWords = [
 ];
 
 const vegetableWords = [
+    "raw",
     "farmer",
     "juice",
     "water prison",
