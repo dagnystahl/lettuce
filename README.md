@@ -1,5 +1,6 @@
 # GreenScreen
 *Ever feel like the internet isn't a very vegan-friendly place? Let's change that.*
+https://chrome.google.com/webstore/detail/greenscreen/ckgigmhiodaanddigljglmllggjekoda
 
 ## :corn: Why GreenScreen? :tangerine:
 
